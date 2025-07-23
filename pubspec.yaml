@@ -9,6 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_native_splash: ^2.4.6
+  get: ^4.7.2
+  google_fonts: ^6.2.1
+  http: ^1.4.0
+  syncfusion_flutter_datagrid: ^30.1.41
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +22,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/logo.png
+
+flutter_native_splash:
+  color: "#000000" # Fondo opaco (negro)
+  image: assets/logo.png # Tu logo si quieres que se vea centrado
+  android: true
+  ios: true
+  web: true
+  android_gravity: center
+  fullscreen: true
