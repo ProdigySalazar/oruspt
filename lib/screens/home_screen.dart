@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:oruspt/controllers/home_controller.dart';
+import 'package:oruspt/widgets/MyLoaderWidget.dart';
 import 'package:oruspt/widgets/MyTextField.dart';
 import 'package:oruspt/widgets/MyTable.dart';
 import 'package:oruspt/widgets/modals/CreatePostDialog.dart';
@@ -112,14 +113,13 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 8),
               Stack(
                 children: [
-                  // Icono decorativo inclinado al fondo
                   Positioned(
                     right: -10,
                     bottom: -10,
                     child: Opacity(
                       opacity: 0.06,
                       child: Transform.rotate(
-                        angle: -0.5, // en radianes (~-28.6°)
+                        angle: -0.5,
                         child: Icon(
                           Icons.auto_stories_rounded,
                           size: 160,
@@ -129,7 +129,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
 
-                  // Botón principal
                   Align(
                     alignment: Alignment.centerRight,
                     child: SizedBox(
@@ -172,7 +171,7 @@ class HomeScreen extends StatelessWidget {
 
               Expanded(
                 child: controller.isLoading.value
-                    ? const Center(child: CircularProgressIndicator())
+                    ? const Center(child: MyLoaderWidget())
                     : controller.filteredPosts.isEmpty
                     ? const Center(child: Text('No hay datos disponibles.'))
                     : const Mytable(),

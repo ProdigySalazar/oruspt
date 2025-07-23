@@ -90,7 +90,7 @@ class _CreatePostDialogState extends State<CreatePostDialog> {
                       decoration: InputDecoration(
                         labelText: 'ID del usuario',
                         filled: true,
-                        fillColor: Colors.white, // ✅ fondo blanco
+                        fillColor: Colors.white,
                         contentPadding: const EdgeInsets.symmetric(
                           horizontal: 14,
                           vertical: 14,
@@ -104,8 +104,7 @@ class _CreatePostDialogState extends State<CreatePostDialog> {
                           borderSide: BorderSide.none,
                         ),
                       ),
-                      dropdownColor:
-                          Colors.white, // ✅ menú desplegable blanco también
+                      dropdownColor: Colors.white,
                       icon: const Icon(Icons.arrow_drop_down),
                       style: GoogleFonts.montserrat(
                         fontSize: 14,
@@ -147,7 +146,7 @@ class _CreatePostDialogState extends State<CreatePostDialog> {
                     onPressed: _isSubmitting ? null : _submitPost,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.indigo.shade600,
-                      elevation: 3, // ⚡ hace que flote visualmente
+                      elevation: 3,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 12,

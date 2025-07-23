@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oruspt/screens/home_screen.dart';
+import 'package:oruspt/widgets/MyLoaderWidget.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -51,10 +52,7 @@ class _SplashScreenState extends State<SplashScreen>
             children: [
               Image.asset('assets/logo.png', width: 140, height: 140),
               const SizedBox(height: 30),
-              CircularProgressIndicator(
-                color: Colors.red.shade600,
-                strokeWidth: 2,
-              ),
+              MyLoaderWidget(color: Colors.indigo),
             ],
           ),
         ),

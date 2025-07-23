@@ -22,7 +22,7 @@ class PostDataSource extends DataGridSource {
                     ? post.body.substring(0, 10)
                     : post.body,
               ),
-              DataGridCell<int>(columnName: 'Detalle', value: post.id), // 👁️
+              DataGridCell<int>(columnName: 'Detalle', value: post.id),
             ],
           ),
         )

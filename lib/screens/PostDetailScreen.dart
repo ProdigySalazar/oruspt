@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:oruspt/controllers/post_detail_controller.dart';
+import 'package:oruspt/widgets/MyLoaderWidget.dart';
 import 'package:oruspt/widgets/PostDetailCard.dart';
 
 class PostDetailScreen extends StatelessWidget {
@@ -71,7 +72,7 @@ class PostDetailScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Obx(() {
                 if (controller.isLoading.value) {
-                  return const Center(child: CircularProgressIndicator());
+                  return const Center(child: MyLoaderWidget());
                 }
 
                 if (controller.error != null) {
